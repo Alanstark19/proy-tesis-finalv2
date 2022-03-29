@@ -16,18 +16,18 @@ export function LoginForm(props) {
   return (
     <BoxContainer>
       <FormContainer>
-        <Input type="email" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+        <Input type="email" placeholder="Correo electrónico" />
+        <Input type="password" placeholder="Contraseña" />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <MutedLink href="#">Forget your password?</MutedLink>
+      <MutedLink href="#">¿Olvidaste tu contraseña?</MutedLink>
       <Marginer direction="vertical" margin="1.6em" />
-      <SubmitButton type="submit">Signin</SubmitButton>
+      <SubmitButton type="submit">Ingresar</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
-        Don't have an accoun?{" "}
+      ¿No tienes una cuenta? {" "}
         <BoldLink href="#" onClick={switchToSignup}>
-          Signup
+        Regístrate
         </BoldLink>
       </MutedLink>
     </BoxContainer>
