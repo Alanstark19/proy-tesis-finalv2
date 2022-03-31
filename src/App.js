@@ -1,23 +1,19 @@
 import "./App.css";
-import styled from "styled-components";
-import { AccountBox } from "./Components/AccountBox";
+import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Navbar from "./Components/Components Navbar/Navbar";
-
-const AppContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import Login from "./Login";
 
 function App() {
   return (
-  <AppContainer>
-    <AccountBox />
-  </AppContainer>
+    <BrowserRouter>
+    <>
+      <Switch>
+        <Route path={"/inicio"} component={Navbar}></Route>
+        <Route path={"/login"} component={Login}></Route>
+      </Switch>
+    </>
+    </BrowserRouter>  
   );
 }
 
