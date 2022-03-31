@@ -10,7 +10,9 @@ MobileIcon
  import { FaBattleNet, FaGlasses } from "react-icons/fa";
  import { BiMenu } from "react-icons/bi";
  import { IconContext } from 'react-icons';
- 
+ import { Link, NavLink } from 'react-router-dom/cjs/react-router-dom.min'
+ import "./Navbar.css";
+
 const Navbar = () => {
   const [showMobileMenu, setshowMobileMenu] = useState(false);
   return (
@@ -48,7 +50,7 @@ const Navbar = () => {
           <MenuItem2><MenuItemLink onClick={() => setshowMobileMenu(!showMobileMenu)}>
           <div>
             <FaGlasses/>
-          Contact me
+            <Link to={'/login'} className="textlink"> Cerrar Sesión</Link>
           </div>
           </MenuItemLink></MenuItem2>
         </Menu>
